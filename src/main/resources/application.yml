@@ -1,0 +1,7 @@
+spring:
+  application.name: multitenancy-mongodb
+
+mongodb:
+  host: localhost
+  port: 27017
+  database: default-db
