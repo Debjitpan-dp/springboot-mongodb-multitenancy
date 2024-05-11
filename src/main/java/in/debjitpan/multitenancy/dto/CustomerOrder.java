@@ -1,7 +1,8 @@
-package com.nazeem.multidb.mongodb.dto;
+package in.debjitpan.multitenancy.dto;
 
+import in.debjitpan.multitenancy.model.Customer;
+import in.debjitpan.multitenancy.model.Order;
 import lombok.Data;
-import com.nazeem.multidb.mongodb.model.*;
 
 import java.util.List;
 

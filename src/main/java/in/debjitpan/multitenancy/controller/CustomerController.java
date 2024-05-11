@@ -1,11 +1,9 @@
-package com.nazeem.multidb.mongodb.controller;
+package in.debjitpan.multitenancy.controller;
 
-import com.nazeem.multidb.mongodb.model.Customer;
-import com.nazeem.multidb.mongodb.service.CustomerService;
+import in.debjitpan.multitenancy.model.Customer;
+import in.debjitpan.multitenancy.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/customer")

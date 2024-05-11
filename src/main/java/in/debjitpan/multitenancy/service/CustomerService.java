@@ -1,30 +1,27 @@
-package com.nazeem.multidb.mongodb.service;
+package in.debjitpan.multitenancy.service;
 
-import com.nazeem.multidb.mongodb.model.Customer;
+import in.debjitpan.multitenancy.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Queue;
 
 @Service
 public class CustomerService {
 
     @Autowired
-    private MongoTemplate customerDbMongoTemplate;
+    private MongoTemplate mongoTemplate;
 
     public Customer save(Customer customer){
-        return customerDbMongoTemplate.save(customer);
+        return mongoTemplate.save(customer);
     }
 
     public List<Customer> findAll(){
-        return customerDbMongoTemplate.findAll(Customer.class);
+        return mongoTemplate.findAll(Customer.class);
     }
 
     public Customer findByCustomerId(String customerId) {
-        return customerDbMongoTemplate.findById(customerId,Customer.class);
+        return mongoTemplate.findById(customerId,Customer.class);
     }
 }

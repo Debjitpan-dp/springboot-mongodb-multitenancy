@@ -1,12 +1,10 @@
-package com.nazeem.multidb.mongodb.controller;
+package in.debjitpan.multitenancy.controller;
 
-import com.nazeem.multidb.mongodb.dto.CustomerOrder;
-import com.nazeem.multidb.mongodb.model.Order;
-import com.nazeem.multidb.mongodb.service.OrderService;
+import in.debjitpan.multitenancy.dto.CustomerOrder;
+import in.debjitpan.multitenancy.model.Order;
+import in.debjitpan.multitenancy.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/order")

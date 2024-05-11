@@ -1,8 +1,8 @@
-package com.nazeem.multidb.mongodb.service;
+package in.debjitpan.multitenancy.service;
 
-import com.nazeem.multidb.mongodb.dto.CustomerOrder;
-import com.nazeem.multidb.mongodb.model.Customer;
-import com.nazeem.multidb.mongodb.model.Order;
+import in.debjitpan.multitenancy.dto.CustomerOrder;
+import in.debjitpan.multitenancy.model.Customer;
+import in.debjitpan.multitenancy.model.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -17,17 +17,14 @@ public class OrderService {
 
 
     @Autowired
-    private MongoTemplate orderDbMongoTemplate;
-
-    @Autowired
-    MongoTemplate customerDbMongoTemplate;
+    private MongoTemplate mongoTemplate;
 
 
 
 
 
     public Order save(Order order){
-        return orderDbMongoTemplate.save(order);
+        return mongoTemplate.save(order);
     }
 
     public CustomerOrder findCustomerOrders(String customerId) {
@@ -36,10 +33,10 @@ public class OrderService {
 
         //Find orders
         List<Order> orders = new ArrayList<>();
-        orders = orderDbMongoTemplate.find(query, Order.class);
+        orders = mongoTemplate.find(query, Order.class);
 
         //Find customer
-        Customer customer = customerDbMongoTemplate.findOne(query, Customer.class);
+        Customer customer = mongoTemplate.findOne(query, Customer.class);
 
         //creating customer's orders
         CustomerOrder customerOrder = new CustomerOrder();

@@ -1,4 +1,4 @@
-package com.nazeem.multidb.mongodb.model;
+package in.debjitpan.multitenancy.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
