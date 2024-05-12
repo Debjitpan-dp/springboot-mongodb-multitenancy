@@ -1,5 +1,6 @@
 # springboot-multi-tenancy-with-mongo
 
+
 [Spring Boot](http://projects.spring.io/spring-boot/) sample app to implement Dynamic Multi-tenancy with MongoDb.\
 This repository contains the code for the How to implement Multi-tenancy using MongoDB in a spring boot application.
 ## Requirements
@@ -14,3 +15,7 @@ For building and running the application you need:
 There are several ways to run a Spring Boot application on your local machine.
 
 * execute the `main` method in the `in.debjitpan.multitenancy.MultitenantInMongoDbApplication.class` class from your IDE.
+
+## Multi-tenancy
+Here, we are following, database per tenant in same cluster. There is a default tenant which will be used if you \
+don't provide "X-TenantId" in header of API request.
